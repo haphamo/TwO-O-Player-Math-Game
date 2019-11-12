@@ -11,3 +11,14 @@ class Player
       self.lives -= 1
     end
 end
+
+
+# determines which player is ther current player
+# The current player value will alternate between 0 and 1
+class Turn
+  def initialize
+    @current_player = 0
+  end
+  def switch
+    self.current_player = (self.current_player + 1) % 2
+  end
